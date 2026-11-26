@@ -1,0 +1,6 @@
+New project opens a gallery picker: choose photos and videos in order and they land on the timeline back to back.
+The gallery picker has an album menu, All / Videos / Photos tabs, numbered picks and a tray to remove them.
+Media added in the editor goes after your existing clips instead of on top of them.
+Frame capture takes several frames first, then saves them all at once.
+A new home screen with a New project banner and tool shortcuts.
+The built-in updater is turned off.
