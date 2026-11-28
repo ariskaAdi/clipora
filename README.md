@@ -31,11 +31,11 @@ and keeps its engine and features. See [Credits](#credits).
   any of them before adding. **Other apps** opens the system picker when your media lives somewhere else.
 - **Added clips go to the end.** In the editor, new photos and videos join the end of your existing clips instead of
   stacking on top of them. Drag a clip if you do want it layered. Sounds still go in at the playhead.
-- **Frame capture in batches.** Open **Screenshot** on a video clip, move the playhead and tap **Capture** as many times
-  as you like. Check the frames in the strip, remove the ones you don't want, then **Save all**. They are saved to your
-  gallery and added to the timeline one after another, in a single step you can undo.
+- **Frame capture.** A tool of its own, outside the editor. Choose a video, drag along the strip or step frame by frame,
+  and tap **Capture** as many times as you like. Remove the frames you don't want, choose JPG or PNG, then **Save all**.
+  The frames go straight to your gallery at full size, and no project is created.
 - **A new home screen.** A big **New project** button, a grid of shortcuts to the tools (Trim, Compress, Extract audio,
-  Make a GIF, Enhance quality, Templates, Import project, All tools) and your projects underneath.
+  Make a GIF, Frame capture, Templates, Import project, All tools) and your projects underneath.
 
 ## Features
 

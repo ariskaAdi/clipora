@@ -915,7 +915,7 @@ private fun ShortcutGrid(onShortcut: (String) -> Unit) {
         if (tools) Triple("compress", HomeIcons.Compress, R.string.tools_compress) else null,
         if (tools) Triple("extract", HomeIcons.Audio, R.string.home_shortcut_extract) else null,
         if (tools) Triple("gif", HomeIcons.Gif, R.string.tools_gif) else null,
-        if (tools) Triple("enhance", HomeIcons.Enhance, R.string.home_shortcut_enhance) else null,
+        if (tools) Triple("framecap", HomeIcons.FrameCapture, R.string.framecap_title) else null,
         Triple("templates", HomeIcons.TemplatesTab, R.string.home_tab_templates),
         Triple("import", HomeIcons.Upload, R.string.home_shortcut_import),
         if (tools) Triple("all", HomeIcons.AllTools, R.string.home_shortcut_all_tools) else null,

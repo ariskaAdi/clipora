@@ -267,7 +267,6 @@ class EditorState(
     var addOpen by mutableStateOf(false)
 
     var cameraOpen by mutableStateOf(false)
-    val frameCaptures = FrameCaptures()
 
     var drawing by mutableStateOf<DrawingMode?>(null)
 

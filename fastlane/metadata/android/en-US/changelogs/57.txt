@@ -1,0 +1,2 @@
+Frame capture is its own tool: pick a video, capture as many frames as you like and save them all to the gallery as JPG or PNG. No project is created.
+The editor's Screenshot button saves a single frame again.

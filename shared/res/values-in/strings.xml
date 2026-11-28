@@ -2663,14 +2663,19 @@
     <string name="home_shortcut_import">Impor proyek</string>
     <string name="home_shortcut_all_tools">Semua alat</string>
     <string name="framecap_title">Ambil frame</string>
+    <string name="framecap_about">Ambil beberapa frame dari video dan simpan sebagai gambar.</string>
     <string name="framecap_count">%1$d diambil</string>
     <string name="framecap_capture">Ambil</string>
     <string name="framecap_save_all">Simpan semua (%1$d)</string>
-    <string name="framecap_hint">Geser playhead ke video lalu ketuk Ambil. Ambil frame sebanyak yang kamu mau, lalu Simpan semua.</string>
-    <string name="framecap_not_video">Pilih klip video dan letakkan playhead di atasnya</string>
+    <string name="framecap_hint">Geser di strip untuk mencari frame lalu ketuk Ambil. Ambil sebanyak yang kamu mau, lalu Simpan semua.</string>
+    <string name="framecap_none">Belum ada frame yang diambil.</string>
+    <string name="framecap_saving">Menyimpan %1$d dari %2$d…</string>
+    <string name="framecap_format">Format gambar</string>
+    <string name="framecap_prev">Frame sebelumnya</string>
+    <string name="framecap_next">Frame berikutnya</string>
     <string name="framecap_discard">Buang</string>
     <string name="framecap_discard_title">Buang %1$d frame yang sudah diambil?</string>
     <plurals name="framecap_saved">
-        <item quantity="other">%1$d frame disimpan dan ditambahkan</item>
+        <item quantity="other">%1$d frame disimpan ke galeri</item>
     </plurals>
 </resources>

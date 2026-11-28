@@ -143,7 +143,7 @@ private val installScope = kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.
 private var installPercent by mutableStateOf<Int?>(null)
 private val downloader = videoDownloader()
 
-internal val DefaultToolOrder = listOf("compress", "trim", "extract", "gif", "downloader", "enhance")
+internal val DefaultToolOrder = listOf("compress", "trim", "extract", "gif", "framecap", "downloader", "enhance")
 
 internal fun toolOrder(saved: List<String>): List<String> {
     val valid = DefaultToolOrder.toSet()
@@ -287,6 +287,7 @@ internal fun ToolsTab(modifier: Modifier, store: ProjectStore, settings: AppSett
             "extract" -> open = 4
             "gif" -> open = 5
             "enhance" -> open = 6
+            "framecap" -> open = 7
         }
         ToolRequest.pending = null
     }
@@ -306,6 +307,7 @@ internal fun ToolsTab(modifier: Modifier, store: ProjectStore, settings: AppSett
                     else -> asking = true
                 }
             }
+            "framecap" -> ToolCard(HomeIcons.FrameCapture, stringResource(R.string.framecap_title), stringResource(R.string.framecap_about), modifier = placed, arranging = arranging, onMoveUp = up, onMoveDown = down) { open = 7 }
             "enhance" -> ToolCard(HomeIcons.Compress, stringResource(R.string.tools_enhance_image), stringResource(R.string.tools_enhance_image_about), modifier = placed, arranging = arranging, onMoveUp = up, onMoveDown = down) { open = 6 }
         }
     }
@@ -354,6 +356,7 @@ internal fun ToolsTab(modifier: Modifier, store: ProjectStore, settings: AppSett
         4 -> ExtractAudioScreen { open = 0 }
         5 -> GifScreen { open = 0 }
         6 -> EnhanceImageScreen { open = 0 }
+        7 -> FrameCaptureScreen { open = 0 }
     }
 }
 

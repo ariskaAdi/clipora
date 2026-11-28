@@ -59,6 +59,7 @@ internal object HomeIcons {
     val Compress = icon("Compress", stroke = "M15 15L21 21M15 15L15 19.8M15 15L19.8 15M9 19.8L9 15M9 15L4.2 15M9 15L3 21M15 4.2L15 9M15 9L19.8 9M15 9L21 3M9 4.2L9 9M9 9L4.2 9" +
             "M9 9L3 3", width = 1.8f)
     val Audio = icon("Audio", stroke = "M9 18L9 5L21 3L21 16M3 18A3 3 0 1 0 9 18A3 3 0 1 0 3 18ZM15 16A3 3 0 1 0 21 16A3 3 0 1 0 15 16Z", width = 1.8f)
+    val FrameCapture = icon("FrameCapture", width = 1.7f, stroke = "M14.5 4L9.5 4L7 7L4 7A2 2 0 0 0 2 9L2 18A2 2 0 0 0 4 20L20 20A2 2 0 0 0 22 18L22 9A2 2 0 0 0 20 7L17 7ZM9 13A3 3 0 1 0 15 13A3 3 0 1 0 9 13Z")
     val Gif = icon("Gif", stroke = "M17 2L21 6L17 10M3 11L3 10A4 4 0 0 1 7 6L21 6M7 22L3 18L7 14M21 13L21 14A4 4 0 0 1 17 18L3 18", width = 1.8f)
     val Trim = icon("Trim", stroke = "M3 6A3 3 0 1 0 9 6A3 3 0 1 0 3 6ZM3 18A3 3 0 1 0 9 18A3 3 0 1 0 3 18ZM20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12", width = 1.8f)
     val Notes = icon("Notes", stroke = "M6.5 2.5L14 2.5L19.5 8L19.5 19.5A2 2 0 0 1 17.5 21.5L6.5 21.5A2 2 0 0 1 4.5 19.5L4.5 4.5A2 2 0 0 1 6.5 2.5ZM14 2.5L14 8L19.5 8M8.5 12L15.5 12M8.5 16L15.5 16", width = 1.6f)

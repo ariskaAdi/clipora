@@ -87,6 +87,8 @@ import app.absentmotion.editor.editDrawing
 import app.absentmotion.editor.requestPoints
 import app.absentmotion.editor.canCrop
 import android.widget.Toast
+import app.absentmotion.editor.canScreenshot
+import app.absentmotion.editor.screenshotFrame
 import kotlinx.coroutines.launch
 import app.absentmotion.editor.openCrop
 import app.absentmotion.editor.moveClipEdges
@@ -162,10 +164,6 @@ fun LayerTools(state: EditorState, modifier: Modifier = Modifier, side: Boolean 
         ElementProperties(state, { properties = false }, modifier)
         return
     }
-    if (state.frameCaptures.open) {
-        FrameCaptureTray(state, modifier)
-        return
-    }
     Column(modifier.background(Am.Panel).deskVerticalScroll().padding(start = 62.px, top = 42.px, end = 62.px)) {
         Row(Modifier.fillMaxWidth().height(107.px)) {
             SmallTool(PanelIcons.Speed, stringResource(R.string.a11y_speed), Modifier.width(183.px), ToolShape, enabled = still?.mediaFill?.video == true || still?.kind == "audio") { state.panel = EditorPanel.Speed }
@@ -239,6 +237,12 @@ fun LayerTools(state: EditorState, modifier: Modifier = Modifier, side: Boolean 
             }
         }
         val video = still?.mediaFill?.video == true
+        val editorScope = LocalEditorScope.current
+        var shooting by remember { mutableStateOf(false) }
+        val storage = app.absentmotion.platform.rememberStorageAccess()
+        val outside = stringResource(R.string.screenshot_outside)
+        val saved = stringResource(R.string.screenshot_saved)
+        val failed = stringResource(R.string.screenshot_failed)
         val more = listOfNotNull(
             if (kind == "shape" && still.isShapeTemplate == true) Tile(EditPoints) { state.requestPoints(enter = true) } else null,
             if (kind == "shape" && drawn && still.let(ShapeCatalog::paramsFor).orEmpty().isNotEmpty()) Tile(EditShape) { state.panel = EditorPanel.EditShape } else null,
@@ -249,9 +253,17 @@ fun LayerTools(state: EditorState, modifier: Modifier = Modifier, side: Boolean 
             if (app.absentmotion.platform.PlatformFeatures.ai && still?.mediaFill != null) Tile(AiTools) { openEffectBrowser(state, "ai") } else null,
             if (app.absentmotion.platform.PlatformFeatures.ai && video) Tile(CaptionTools) { state.playing = false; captions = true } else null,
             if (app.absentmotion.platform.PlatformFeatures.ai && video) Tile(ReverseTool, enabled = ai.running == null, active = still.reverseMark != null) { state.playing = false; ai.apply(AiAction.Reverse) } else null,
-            if (video) Tile(ScreenshotTool) {
+            if (video) Tile(ScreenshotTool, enabled = !shooting) {
                 state.playing = false
-                state.frameCaptures.open = true
+                fun shoot() {
+                    shooting = true
+                    editorScope.launch {
+                        val done = try { state.screenshotFrame(context, editorScope) } catch (e: kotlinx.coroutines.CancellationException) { throw e } catch (e: Exception) { false } finally { shooting = false }
+                        Toast.makeText(context, if (done) saved else failed, Toast.LENGTH_SHORT).show()
+                    }
+                }
+                if (!state.canScreenshot(state.selected)) Toast.makeText(context, outside, Toast.LENGTH_SHORT).show()
+                else if (storage.ready { shoot() }) shoot()
             } else null,
         )
         if (side) (rows.flatten() + more).let { tiles -> sideColumns(tiles.size, LocalSideHeight.current).let { TileRows(tiles.chunked(it), it) } }

@@ -6,6 +6,17 @@ All notable changes to AbsentMotion are listed here, newest first. The format fo
 Versions before 2.0.0 were never published or numbered. The entry for 1.0.0 stands for the feature set as it stood on
 2026-10-12.
 
+## [5.2.4] - 2026-11-28
+
+### Added
+
+- **Frame capture tool**. A tool of its own in Tools and on the home screen. Choose a video, drag along the strip or step one frame at a time, and tap Capture as many times as you like. Tap a captured frame to go back to it, remove the ones you don't want, choose JPG or PNG, then Save all. The frames are saved to the gallery at the video's full size. No project is created or changed.
+
+### Changed
+
+- **Screenshot in the editor** saves a single frame again, as in AbsentMotion. Batch capture has moved to the Frame capture tool.
+- **Home shortcuts**. Frame capture takes the place of Enhance quality, which stays in Tools.
+
 ## [5.2.3] - 2026-11-27
 
 First Clipora release, based on AbsentMotion 5.2.2.

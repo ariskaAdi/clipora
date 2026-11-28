@@ -2722,15 +2722,20 @@
     <string name="home_shortcut_import">Import project</string>
     <string name="home_shortcut_all_tools">All tools</string>
     <string name="framecap_title">Frame capture</string>
+    <string name="framecap_about">Grabs several frames from a video and saves them as pictures.</string>
     <string name="framecap_count">%1$d captured</string>
     <string name="framecap_capture">Capture</string>
     <string name="framecap_save_all">Save all (%1$d)</string>
-    <string name="framecap_hint">Move the playhead over the video and tap Capture. Take as many frames as you need, then Save all.</string>
-    <string name="framecap_not_video">Select a video clip and put the playhead over it</string>
+    <string name="framecap_hint">Drag along the strip to find a frame and tap Capture. Take as many as you need, then Save all.</string>
+    <string name="framecap_none">No frames captured yet.</string>
+    <string name="framecap_saving">Saving %1$d of %2$d…</string>
+    <string name="framecap_format">Picture format</string>
+    <string name="framecap_prev">Previous frame</string>
+    <string name="framecap_next">Next frame</string>
     <string name="framecap_discard">Discard</string>
     <string name="framecap_discard_title">Discard %1$d captured frames?</string>
     <plurals name="framecap_saved">
-        <item quantity="one">%1$d frame saved and added</item>
-        <item quantity="other">%1$d frames saved and added</item>
+        <item quantity="one">%1$d frame saved to the gallery</item>
+        <item quantity="other">%1$d frames saved to the gallery</item>
     </plurals>
 </resources>
