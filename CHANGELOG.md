@@ -6,6 +6,26 @@ All notable changes to AbsentMotion are listed here, newest first. The format fo
 Versions before 2.0.0 were never published or numbered. The entry for 1.0.0 stands for the feature set as it stood on
 2026-10-12.
 
+## [5.2.3] - 2026-11-27
+
+First Clipora release, based on AbsentMotion 5.2.2.
+
+### Added
+
+- **New project from the gallery**. New project opens a gallery picker: choose photos and videos in the order you want and tap Add. The project takes the shape of the first clip and opens with every clip placed back to back on the timeline. Blank project is still there for a custom size, frame rate and background.
+- **Gallery picker**. Choose the album from a menu that drops down from the top, filter by All, Videos or Photos, and see a numbered badge on each pick. The tray at the bottom shows the picks in order and removes any of them. Other apps opens the system picker. View all in the editor's Media tab opens the same picker.
+- **Frame capture in batches**. Screenshot on a video clip opens a capture strip: move the playhead and tap Capture as many times as you like, remove the frames you don't want, then Save all. The frames are saved to the gallery and added to the timeline one after another as a single undo step.
+
+### Changed
+
+- **Added clips go to the end**. Photos and videos added in the editor are placed after the existing clips instead of on top of them. Sounds still go in at the playhead.
+- **Home screen**. A New project banner, a grid of tool shortcuts (Trim, Compress, Extract audio, Make a GIF, Enhance quality, Templates, Import project, All tools) and the projects underneath. The bottom bar no longer has a + button.
+- **Android photo picker** picks several pictures at once.
+
+### Removed
+
+- **App updates**. The built-in updater is turned off, so the app no longer checks for or downloads AbsentMotion releases.
+
 ## [5.2.2] - 2026-11-20
 
 ### Added
